@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>EloBall</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+
+
+    <div id="options">
+        <ul>
+            <li><a class="division-option" onclick="getDivision('all'); return false" >All Teams</a></li>
+            <li><a class="division-option" onclick="getDivision('AL'); return false">AL</a></li>
+            <li><a class="division-option" onclick="getDivision('ALEast'); return false">AL East</a></li>
+            <li><a class="division-option" onclick="getDivision('ALCentral'); return false">AL Central</a></li>
+            <li><a class="division-option" onclick="getDivision('ALWest'); return false">AL West</a></li>
+
+            <li><a class="division-option" onclick="getDivision('NL'); return false">NL</a></li>
+            <li><a class="division-option" onclick="getDivision('NLEast'); return false">NL East</a></li>
+            <li><a class="division-option" onclick="getDivision('NLCentral'); return false">NL Central</a></li>
+            <li><a class="division-option" onclick="getDivision('NLWest'); return false">NL West</a></li>
+
+
+        </ul>
+    </div>
+
+
+    <div id="rank-table">
+
+
+
+        <h2 id="race-title"></h2>
+        <table id="data-table">
+            <thead>
+                <tr id="table-head"></tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+
+
+    </div>
+    <h3 style="text-align: center; color:white;"><a id="githubLink" href="https://github.com/jmi06">Made by jmi06</a></h3>
+
+
+
+
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("components/header.html");
+        });
+    </script>
+    <script src="scripts/script.js"></script>
+
+</body>
+</html>
