@@ -99,8 +99,16 @@ function generate_table(division, data) {
                 if (stat == "record"){
                     if(team[1]['record']){
 
-                        new_stat = team[1]['record'].split('/')
-                        new_stat = new_stat[0] / (new_stat[0] + new_stat[1])
+                        new_stat = team[1]['record'].split('-')
+                        console.log(new_stat)
+                        new_stat = new_stat[0] / ( Number(new_stat[0]) + Number(new_stat[1]))
+                        new_stat = new_stat.toFixed(3);
+
+                        if(new_stat < 1){
+                            new_stat = new_stat.slice(1)
+                        }
+
+
                     } else{
                         new_stat = '--'
                     }
